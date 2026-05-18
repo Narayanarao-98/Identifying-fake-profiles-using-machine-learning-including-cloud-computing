@@ -1,5 +1,3 @@
-﻿# Identifying-fake-profiles-using-machine-learning-including-cloud-computing
-
 # Fake Profile Detection Using Machine Learning Including Cloud Computing
 
 ## 📌 Project Overview
