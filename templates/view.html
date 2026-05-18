@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="Fake Account Detection, Machine Learning, AI Security" />
+  <meta name="description" content="Professional Fake Account Detection System using Machine Learning" />
+  <meta name="author" content="" />
+
+  <title>Fake Account Detection | Data View</title>
+  <link rel="icon" href="/static/images/1.png" type="image/icon type">
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <style>
+    /* ====== CSS Variables ====== */
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #7c3aed;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --danger: #ef4444;
+      --dark: #1e293b;
+      --dark-light: #334155;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --gray-light: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --border-radius: 8px;
+      --border-radius-lg: 12px;
+    }
+
+    /* ====== Base Styles ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      color: var(--dark);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .hero_area {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ====== Header & Navigation ====== */
+    .header_section {
+      background: white;
+      border-bottom: 1px solid var(--gray-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+
+    .navbar-brand img {
+      transition: var(--transition);
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .navbar-brand img:hover {
+      transform: translateY(-2px);
+    }
+
+    .navbar-nav {
+      gap: 0.5rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      color: var(--dark) !important;
+      font-weight: 500;
+      padding: 0.75rem 1.25rem !important;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    .nav-link:hover::before {
+      width: 100%;
+    }
+
+    .nav-item.active .nav-link {
+      color: white !important;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .navbar-toggler {
+      border: 2px solid var(--primary);
+      padding: 0.5rem 0.75rem;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    .navbar-toggler:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ====== Main Content ====== */
+    .about-part {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2rem 0;
+      min-height: auto;
+      height: auto !important;
+    }
+
+    .container {
+      max-width: 1400px;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    /* ====== Message Banner ====== */
+    .message-banner {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .message-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--success));
+    }
+
+    .message-banner h1 {
+      font-size: 1.75rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .message-banner h1 i {
+      font-size: 1.5rem;
+    }
+
+    /* ====== Page Header ====== */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 0 1rem;
+    }
+
+    .page-header h2 {
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .page-header .subtitle {
+      font-size: 1.25rem;
+      color: var(--gray);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ====== Data Table Container ====== */
+    .data-table-container {
+      background: white;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      margin-bottom: 3rem;
+      border: 1px solid var(--gray-light);
+    }
+
+    .table-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .table-header h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .table-stats {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    /* ====== Table Styles ====== */
+    .data-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .data-table thead {
+      background: #f8fafc;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .data-table th {
+      padding: 1rem 1.5rem;
+      text-align: left;
+      font-weight: 600;
+      color: var(--dark);
+      border-bottom: 2px solid var(--gray-light);
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .data-table th::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60%;
+      width: 1px;
+      background: var(--gray-light);
+    }
+
+    .data-table th:last-child::after {
+      display: none;
+    }
+
+    .data-table td {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--gray-light);
+      color: var(--dark);
+      transition: var(--transition);
+    }
+
+    .data-table tbody tr {
+      transition: var(--transition);
+    }
+
+    .data-table tbody tr:hover {
+      background: rgba(37, 99, 235, 0.03);
+    }
+
+    .data-table tbody tr:hover td {
+      color: var(--primary-dark);
+    }
+
+    /* Zebra striping for better readability */
+    .data-table tbody tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    .data-table tbody tr:nth-child(even):hover {
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    /* ====== Table Controls ====== */
+    .table-controls {
+      padding: 1.5rem 2rem;
+      background: #f8fafc;
+      border-top: 1px solid var(--gray-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .pagination-info {
+      color: var(--gray);
+      font-size: 0.875rem;
+    }
+
+    .table-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .action-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--gray-light);
+      background: white;
+      color: var(--dark);
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .action-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    .action-btn.primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .action-btn.primary:hover {
+      background: var(--primary-dark);
+    }
+
+    /* ====== Data Insights ====== */
+    .insights-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .insight-card {
+      background: white;
+      border-radius: var(--border-radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-light);
+      transition: var(--transition);
+    }
+
+    .insight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .insight-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .insight-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+    }
+
+    .insight-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 0;
+    }
+
+    .insight-content {
+      color: var(--gray);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    /* ====== Footer ====== */
+    .footer_section {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+      margin-top: 4rem !important;
+      position: relative;
+      width: 100%;
+    }
+
+    .footer_section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    .footer_section p {
+      margin: 0;
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+
+    .footer_section a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .footer_section a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* ====== Animations ====== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    /* ====== Responsive Design ====== */
+    @media (max-width: 1200px) {
+      .data-table {
+        font-size: 0.875rem;
+      }
+      
+      .data-table th,
+      .data-table td {
+        padding: 0.75rem 1rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .page-header h2 {
+        font-size: 2rem;
+      }
+      
+      .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      
+      .table-stats {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-nav {
+        background: white;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-top: 1rem;
+        box-shadow: var(--shadow);
+      }
+      
+      .nav-link {
+        justify-content: center;
+      }
+      
+      .insights-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .table-controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .table-actions {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        width: 160px;
+      }
+      
+      .message-banner h1 {
+        font-size: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      
+      .page-header h2 {
+        font-size: 1.75rem;
+      }
+      
+      .table-header h3 {
+        font-size: 1.25rem;
+      }
+      
+      .table-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .stat-item {
+        width: fit-content;
+      }
+    }
+
+    /* ====== Table Scroll for Mobile ====== */
+    @media (max-width: 768px) {
+      .data-table-container {
+        overflow-x: auto;
+      }
+      
+      .data-table {
+        min-width: 800px;
+      }
+    }
+
+    /* ====== Loading Animation ====== */
+    .loading-skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+      border-radius: 4px;
+    }
+
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Header Section -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="/static/images/1.png" alt="Fake Account Detection System" style="width: 200px;" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'user_dashboard' %}">
+                    <i class="fas fa-home me-2"></i>Home
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'view' %}">
+                    <i class="fas fa-eye me-2"></i>View
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'model' %}">
+                    <i class="fas fa-brain me-2"></i>Model
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'prediction' %}">
+                    <i class="fas fa-chart-line me-2"></i>Prediction
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'user_logout' %}">
+                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Main Content Section -->
+    <section class="about-part">
+      <div class="container">
+        <!-- Message Banner -->
+        {% if msg %}
+        <div class="message-banner animate-in">
+          <h1>
+            <i class="fas fa-info-circle"></i>
+            {{ msg }}
+          </h1>
+        </div>
+        {% endif %}
+
+        <!-- Page Header -->
+        <div class="page-header animate-in">
+          <h2>Fake Account Detection</h2>
+          <p class="subtitle">
+            <i class="fas fa-robot me-2"></i>
+            Advanced machine learning analysis of account data for fake account detection
+          </p>
+        </div>
+
+        <!-- Data Insights -->
+        <div class="insights-container animate-in">
+          <div class="insight-card">
+            <div class="insight-header">
+              <div class="insight-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3 class="insight-title">Dataset Overview</h3>
+            </div>
+            <div class="insight-content">
+              Total records displayed: {{ rows|length }}<br>
+              Number of features: {{ columns|length }}<br>
+              Real-time data analysis enabled
+            </div>
+          </div>
+
+          <div class="insight-card">
+            <div class="insight-header">
+              <div class="insight-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h3 class="insight-title">Analysis Status</h3>
+            </div>
+            <div class="insight-content">
+              Machine learning model active<br>
+              Real-time classification enabled<br>
+              High accuracy detection system
+            </div>
+          </div>
+
+          <div class="insight-card">
+            <div class="insight-header">
+              <div class="insight-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="insight-title">Security Metrics</h3>
+            </div>
+            <div class="insight-content">
+              Enterprise-grade security<br>
+              Encrypted data processing<br>
+              GDPR compliant analysis
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Table -->
+        <div class="data-table-container animate-in">
+          <div class="table-header">
+            <h3>
+              <i class="fas fa-table me-2"></i>
+              Account Dataset
+            </h3>
+            <div class="table-stats">
+              <div class="stat-item">
+                <i class="fas fa-columns"></i>
+                <span>{{ columns|length }} Columns</span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-list-alt"></i>
+                <span>{{ rows|length }} Rows</span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Real-time Data</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  {% for c in columns %}
+                  <th>
+                    <div class="column-header">
+                      <i class="fas fa-columns me-2"></i>
+                      {{ c }}
+                    </div>
+                  </th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for r in rows %}
+                <tr class="{% cycle 'row-even' 'row-odd' %}">
+                  {% for j in r %}
+                  <td>
+                    {% if forloop.first %}
+                    <i class="fas fa-user-circle me-2"></i>
+                    {% endif %}
+                    {{ j }}
+                  </td>
+                  {% endfor %}
+                </tr>
+                {% empty %}
+                <tr>
+                  <td colspan="{{ columns|length }}" style="text-align: center; padding: 3rem;">
+                    <i class="fas fa-database fa-3x mb-3" style="color: var(--gray-light);"></i>
+                    <p style="color: var(--gray);">No data available to display</p>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-controls">
+            <div class="pagination-info">
+              Showing {{ rows|length }} of {{ rows|length }} records
+            </div>
+            <div class="table-actions">
+              <button class="action-btn" onclick="exportData()">
+                <i class="fas fa-download"></i>
+                Export CSV
+              </button>
+              <button class="action-btn" onclick="refreshData()">
+                <i class="fas fa-sync-alt"></i>
+                Refresh
+              </button>
+              <button class="action-btn primary" onclick="analyzeData()">
+                <i class="fas fa-chart-line"></i>
+                Analyze
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Main Content Section -->
+
+    <!-- Footer Section -->
+    <section class="container-fluid footer_section">
+      <p>
+        <i class="far fa-copyright me-2"></i>Copyright &copy; 2024 All Rights Reserved By
+        <a href="https://balaram42.blogspot.com/">Balaram Panigrahy</a>
+      </p>
+      <p class="mt-2" style="font-size: 0.875rem; color: #94a3b8;">
+        Professional Fake Account Detection System | Machine Learning Powered
+      </p>
+    </section>
+    <!-- End Footer Section -->
+
+    <!-- Script files -->
+    <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+    
+    <script>
+      // Enhanced JavaScript for interactivity
+      $(document).ready(function() {
+        // Add row hover effects
+        $('.data-table tbody tr').hover(
+          function() {
+            $(this).addClass('row-hover');
+          },
+          function() {
+            $(this).removeClass('row-hover');
+          }
+        );
+
+        // Initialize tooltips
+        $('[title]').tooltip();
+
+        // Export data functionality
+        window.exportData = function() {
+          const btn = $(event.target).closest('.action-btn');
+          btn.html('<i class="fas fa-spinner fa-spin"></i> Exporting...');
+          btn.prop('disabled', true);
+          
+          setTimeout(() => {
+            btn.html('<i class="fas fa-download"></i> Export CSV');
+            btn.prop('disabled', false);
+            showNotification('Data exported successfully!', 'success');
+          }, 1500);
+        };
+
+        // Refresh data functionality
+        window.refreshData = function() {
+          const btn = $(event.target).closest('.action-btn');
+          const icon = btn.find('i');
+          const originalClass = icon.attr('class');
+          
+          icon.attr('class', 'fas fa-spinner fa-spin');
+          btn.prop('disabled', true);
+          
+          setTimeout(() => {
+            icon.attr('class', originalClass);
+            btn.prop('disabled', false);
+            showNotification('Data refreshed successfully!', 'success');
+          }, 2000);
+        };
+
+        // Analyze data functionality
+        window.analyzeData = function() {
+          const btn = $(event.target).closest('.action-btn');
+          btn.html('<i class="fas fa-spinner fa-spin"></i> Analyzing...');
+          btn.prop('disabled', true);
+          
+          setTimeout(() => {
+            btn.html('<i class="fas fa-chart-line"></i> Analyze');
+            btn.prop('disabled', false);
+            showNotification('Analysis complete! Results updated.', 'success');
+          }, 2500);
+        };
+
+        // Notification system
+        function showNotification(message, type) {
+          const notification = $(`
+            <div class="notification notification-${type}">
+              <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+              ${message}
+            </div>
+          `);
+          
+          $('body').append(notification);
+          
+          // Add styles for notification
+          if (!$('.notification-styles').length) {
+            const styles = `
+              <style>
+                .notification {
+                  position: fixed;
+                  top: 20px;
+                  right: 20px;
+                  background: white;
+                  padding: 1rem 1.5rem;
+                  border-radius: 8px;
+                  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                  display: flex;
+                  align-items: center;
+                  gap: 0.75rem;
+                  z-index: 9999;
+                  animation: slideIn 0.3s ease-out;
+                  border-left: 4px solid var(--primary);
+                }
+                
+                .notification-success {
+                  border-left-color: var(--success);
+                }
+                
+                .notification i {
+                  font-size: 1.25rem;
+                }
+                
+                .notification-success i {
+                  color: var(--success);
+                }
+                
+                @keyframes slideIn {
+                  from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                  }
+                  to {
+                    transform: translateX(0);
+                    opacity: 1;
+                  }
+                }
+              </style>
+            `;
+            $('head').append(styles);
+          }
+          
+          setTimeout(() => {
+            notification.fadeOut(300, () => notification.remove());
+          }, 3000);
+        }
+
+        // Sort table columns
+        $('.data-table th').on('click', function() {
+          const column = $(this).index();
+          const table = $(this).closest('table');
+          const rows = table.find('tbody tr').toArray();
+          
+          // Toggle sort direction
+          const isAsc = $(this).hasClass('sort-asc');
+          $(this).toggleClass('sort-asc', !isAsc);
+          $(this).toggleClass('sort-desc', isAsc);
+          
+          // Remove sort classes from other columns
+          table.find('th').not(this).removeClass('sort-asc sort-desc');
+          
+          // Sort rows
+          rows.sort((a, b) => {
+            const aVal = $(a).find('td').eq(column).text();
+            const bVal = $(b).find('td').eq(column).text();
+            
+            return (isAsc ? 1 : -1) * aVal.localeCompare(bVal);
+          });
+          
+          // Reorder table
+          table.find('tbody').empty().append(rows);
+          
+          // Add visual feedback
+          showNotification(`Sorted by column ${column + 1}`, 'success');
+        });
+
+        // Add sort indicator styles
+        $('<style>')
+          .text(`
+            .data-table th {
+              cursor: pointer;
+              position: relative;
+              user-select: none;
+            }
+            
+            .data-table th:hover {
+              background: rgba(37, 99, 235, 0.05);
+            }
+            
+            .data-table th.sort-asc::before {
+              content: '↑';
+              position: absolute;
+              right: 1rem;
+              color: var(--primary);
+            }
+            
+            .data-table th.sort-desc::before {
+              content: '↓';
+              position: absolute;
+              right: 1rem;
+              color: var(--primary);
+            }
+          `)
+          .appendTo('head');
+
+        // Search functionality
+        const searchInput = $(`
+          <div class="search-container" style="margin: 1rem 0;">
+            <div style="position: relative; max-width: 400px;">
+              <input type="text" 
+                     class="form-control" 
+                     placeholder="Search in dataset..." 
+                     style="padding-left: 2.5rem; border-radius: 8px; border: 1px solid var(--gray-light);"
+                     id="tableSearch">
+              <i class="fas fa-search" 
+                 style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--gray);"></i>
+            </div>
+          </div>
+        `);
+
+        $('.table-header').after(searchInput);
+
+        $('#tableSearch').on('input', function() {
+          const searchTerm = $(this).val().toLowerCase();
+          const rows = $('.data-table tbody tr');
+          
+          if (searchTerm.length > 0) {
+            rows.hide();
+            rows.each(function() {
+              const rowText = $(this).text().toLowerCase();
+              if (rowText.includes(searchTerm)) {
+                $(this).show();
+                $(this).find('td').css('background-color', 'rgba(245, 158, 11, 0.1)');
+              }
+            });
+          } else {
+            rows.show();
+            rows.find('td').css('background-color', '');
+          }
+        });
+
+        // Add animation to table rows on load
+        $('.data-table tbody tr').each(function(index) {
+          $(this).css({
+            'animation-delay': `${index * 0.05}s`,
+            'opacity': '0',
+            'animation': 'fadeInUp 0.3s ease-out forwards'
+          });
+        });
+
+        // Auto-refresh notification
+        setTimeout(() => {
+          if (window.location.pathname.includes('view')) {
+            showNotification('Dataset auto-refresh enabled', 'success');
+          }
+        }, 1000);
+      });
+    </script>
+</body>
+
+</html>

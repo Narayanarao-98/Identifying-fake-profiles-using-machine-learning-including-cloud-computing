@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="Fake Account Detection, Machine Learning, AI Security" />
+  <meta name="description" content="Professional Fake Account Detection System using Machine Learning" />
+  <meta name="author" content="" />
+
+  <title>Fake Account Detection | Professional ML System</title>
+  <link rel="icon" href="/static/images/1.png" type="image/icon type">
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <style>
+    /* ====== CSS Variables ====== */
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #7c3aed;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --danger: #ef4444;
+      --dark: #1e293b;
+      --dark-light: #334155;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --border-radius: 12px;
+    }
+
+    /* ====== Base Styles ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      color: var(--dark);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .hero_area {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ====== Header & Navigation ====== */
+    .header_section {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+
+    .navbar-brand img {
+      transition: var(--transition);
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .navbar-brand img:hover {
+      transform: translateY(-2px);
+    }
+
+    .navbar-nav {
+      gap: 0.5rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      color: var(--dark) !important;
+      font-weight: 500;
+      padding: 0.75rem 1.25rem !important;
+      border-radius: 8px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    .nav-link:hover::before {
+      width: 100%;
+    }
+
+    .nav-item.active .nav-link {
+      color: white !important;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .navbar-toggler {
+      border: 2px solid var(--primary);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .navbar-toggler:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ====== Main Content ====== */
+    .about-part {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+
+    .about-part-details {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 3rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    /* ====== Metrics Section ====== */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .metric-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    .metric-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .metric-card h1 {
+      font-size: 1.75rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .metric-label {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    /* ====== Model Training Section ====== */
+    .model-training-container {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(124, 58, 237, 0.03) 100%);
+      border-radius: var(--border-radius);
+      padding: 3rem;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+      position: relative;
+    }
+
+    .model-training-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .training-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ====== Form Elements ====== */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .select-container {
+      position: relative;
+    }
+
+    .select-container::after {
+      content: '▼';
+      position: absolute;
+      right: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary);
+      font-size: 0.75rem;
+      pointer-events: none;
+    }
+
+    select {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      background: white;
+      cursor: pointer;
+      transition: var(--transition);
+      appearance: none;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+
+    select option {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .algorithm-option {
+      padding: 1rem;
+      margin: 0.25rem 0;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .algorithm-option:hover {
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    /* ====== Submit Button ====== */
+    .submit-btn {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .submit-btn:hover::before {
+      left: 100%;
+    }
+
+    .submit-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .submit-btn i {
+      font-size: 1.25rem;
+    }
+
+    /* ====== Algorithm Info ====== */
+    .algorithm-info {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--primary);
+    }
+
+    .algorithm-info h4 {
+      color: var(--dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .algorithm-info ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .algorithm-info li {
+      margin-bottom: 0.5rem;
+      color: var(--gray);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .algorithm-info li::before {
+      content: '•';
+      color: var(--primary);
+      font-size: 1.5rem;
+      position: absolute;
+      left: 0;
+      top: -0.5rem;
+    }
+
+    /* ====== Footer ====== */
+    .footer_section {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+      margin-top: 4rem !important;
+      position: relative;
+    }
+
+    .footer_section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    .footer_section p {
+      margin: 0;
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+
+    .footer_section a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .footer_section a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* ====== Animations ====== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.3s;
+    }
+
+    /* ====== Responsive Design ====== */
+    @media (max-width: 992px) {
+      .about-part-details {
+        padding: 2rem;
+        margin: 0 1rem;
+      }
+      
+      .model-training-container {
+        padding: 2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .navbar-nav {
+        background: white;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-top: 1rem;
+        box-shadow: var(--shadow);
+      }
+      
+      .nav-link {
+        justify-content: center;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
+      
+      .section-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        width: 160px;
+      }
+      
+      .metric-card {
+        padding: 1.5rem;
+      }
+      
+      .metric-card h1 {
+        font-size: 1.5rem;
+      }
+      
+      .model-training-container {
+        padding: 1.5rem;
+      }
+      
+      .submit-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    /* ====== Utility Classes ====== */
+    .text-gradient {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-hover {
+      transition: var(--transition);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Header Section -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="/static/images/1.png" alt="Fake Account Detection System" style="width: 200px;" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'user_dashboard' %}">
+                    <i class="fas fa-home me-2"></i>Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'view' %}">
+                    <i class="fas fa-eye me-2"></i>View
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'model' %}">
+                    <i class="fas fa-brain me-2"></i>Model
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'prediction' %}">
+                    <i class="fas fa-chart-line me-2"></i>Prediction
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'user_logout' %}">
+                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Main Content Section -->
+    <section class="about-part">
+      <div class="container">
+        <div class="about-part-details">
+          <!-- Model Performance Metrics -->
+          <div class="metrics-grid animate-in">
+            <div class="metric-card animate-in delay-1">
+              <span class="metric-label">Model Accuracy</span>
+              <div class="icon-wrapper">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h1>{{ msg }}</h1>
+              <p class="text-muted">Current model performance score</p>
+            </div>
+            
+            <div class="metric-card animate-in delay-2">
+              <span class="metric-label">Precision Score</span>
+              <div class="icon-wrapper">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h1>{{ msg1 }}</h1>
+              <p class="text-muted">Algorithm precision measurement</p>
+            </div>
+            
+            <div class="metric-card animate-in delay-3">
+              <span class="metric-label">Training Status</span>
+              <div class="icon-wrapper">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h1>{{ msg2 }}</h1>
+              <p class="text-muted">Current training phase</p>
+            </div>
+            
+            <div class="metric-card animate-in delay-1">
+              <span class="metric-label">Algorithm</span>
+              <div class="icon-wrapper">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <h1>{{ msg3 }}</h1>
+              <p class="text-muted">Active ML algorithm</p>
+            </div>
+          </div>
+
+          <!-- Model Training Section -->
+          <div class="model-training-container animate-in delay-2">
+            <h2 class="section-title">Model Training</h2>
+            <p class="section-subtitle">Train advanced machine learning models for fake account detection</p>
+            
+            <div class="text-center">
+              <h3 class="text-gradient mb-4">
+                <i class="fas fa-shield-alt me-2"></i>Fake Account Detection System
+              </h3>
+              
+              <p class="mb-4" style="color: var(--gray); max-width: 600px; margin: 0 auto 2rem;">
+                Select a machine learning algorithm to train your model. Each algorithm offers unique advantages for detecting fake accounts with high accuracy.
+              </p>
+
+              <!-- Training Form -->
+              <div class="training-form">
+                <form action="{% url 'model' %}" method="post" id="modelForm">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <div class="select-container">
+                      <select name="algo" id="algorithmSelect">
+                        <option value="0">Select Training Algorithm</option>
+                        <option value="1">AdaBoost Classifier</option>
+                        <option value="2">CatBoost Classifier</option>
+                        <option value="4">LSTM Neural Network</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <button type="submit" class="submit-btn" id="trainButton">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Train Model</span>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Algorithm Information -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Main Content Section -->
+
+    <!-- Footer Section -->
+    <section class="container-fluid footer_section">
+      <p>
+        <i class="far fa-copyright me-2"></i>Copyright &copy; 2024 All Rights Reserved By
+        <a href="https://balaram42.blogspot.com/">Balaram Panigrahy</a>
+      </p>
+      <p class="mt-2" style="font-size: 0.875rem; color: #94a3b8;">
+        Professional Fake Account Detection System | Machine Learning Powered
+      </p>
+    </section>
+    <!-- End Footer Section -->
+
+    <!-- Script files -->
+    <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+    
+    <script>
+      // Enhanced JavaScript for interactivity
+      $(document).ready(function() {
+        // Form submission handler
+        $('#modelForm').on('submit', function(e) {
+          const button = $('#trainButton');
+          const originalText = button.find('span').text();
+          const originalIcon = button.find('i').attr('class');
+          
+          // Show loading state
+          button.prop('disabled', true);
+          button.find('span').text('Training in Progress...');
+          button.find('i').attr('class', 'fas fa-spinner fa-spin');
+          
+          // Add pulse animation
+          button.css('animation', 'pulse 1.5s infinite');
+        });
+        
+        // Select change handler
+        $('#algorithmSelect').on('change', function() {
+          const selected = $(this).val();
+          const button = $('#trainButton');
+          
+          if (selected !== '0') {
+            button.removeAttr('disabled');
+            button.css('opacity', '1');
+          } else {
+            button.prop('disabled', true);
+            button.css('opacity', '0.7');
+          }
+        });
+        
+        // Initialize select state
+        $('#algorithmSelect').trigger('change');
+        
+        // Add hover effects to cards
+        $('.metric-card').hover(
+          function() {
+            $(this).addClass('card-hover');
+          },
+          function() {
+            $(this).removeClass('card-hover');
+          }
+        );
+        
+        // Smooth scroll for anchor links
+        $('a[href^="#"]').on('click', function(e) {
+          e.preventDefault();
+          const target = $(this.getAttribute('href'));
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top - 80
+            }, 1000);
+          }
+        });
+        
+        // Add animation on scroll
+        function animateOnScroll() {
+          const elements = $('.animate-in');
+          elements.each(function() {
+            const element = $(this);
+            const position = element.offset().top;
+            const windowHeight = $(window).height();
+            const scrollPosition = $(window).scrollTop() + windowHeight - 100;
+            
+            if (scrollPosition > position) {
+              element.addClass('animated');
+            }
+          });
+        }
+        
+        // Initial check
+        animateOnScroll();
+        
+        // Check on scroll
+        $(window).on('scroll', animateOnScroll);
+        
+        // Add keyboard navigation to select
+        $('#algorithmSelect').on('keydown', function(e) {
+          if (e.key === 'Enter') {
+            $('#modelForm').submit();
+          }
+        });
+        
+        // Tooltip for form elements
+        $('select, button').on('focus', function() {
+          $(this).css('box-shadow', '0 0 0 3px rgba(37, 99, 235, 0.2)');
+        }).on('blur', function() {
+          $(this).css('box-shadow', '');
+        });
+        
+        // Pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+          }
+        `;
+        document.head.appendChild(style);
+      });
+    </script>
+</body>
+
+</html>
